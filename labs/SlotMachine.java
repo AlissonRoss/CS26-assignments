@@ -88,7 +88,11 @@ public class SlotMachine {
 	public static double getBet() {
 		String betInput = JOptionPane.showInputDialog("Enter the amount of bet:");
 		double bet = Double.parseDouble(betInput);
-		
+		if (bet <= 0){
+			JOptionPane.showMessageDialog(null, "No more money!!");
+			System.exit(0);
+			
+		}
 		return bet;
 	}
 
