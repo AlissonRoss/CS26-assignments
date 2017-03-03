@@ -121,7 +121,7 @@ public class SlotMachine {
 	 */
 
 	public static char again() {
-		String getInput = JOptionPane.showInputDialog("Do you want to play again?");
+		String getInput = JOptionPane.showInputDialog("Do you want to play again? Y/N?");
 		getInput = getInput.toLowerCase();
 
 		return getInput.charAt(0);
@@ -133,25 +133,25 @@ public class SlotMachine {
 	public static void display(String w1, String w2, String w3) {
 		
 		HashMap<String, String> h = new HashMap<String, String>() {{
-			put("Cherry", "filepath");
-			put("Orange", "filepath");
-			put("Plum", "filepath");
-			put("Melon", "filepath");
-			put("Bar", "filepath");
-			put("Apple", "filepath");
+			put("Cherry", "src/cherry.png");
+			put("Orange", "src/orange.png");
+			put("Plum", "src/plum.png");
+			put("Melon", "src/melon.png");
+			put("Bar", "src/bar.png");
+			put("Apple", "src/apple.png");
 		}};
 		
 		ImageIcon icon1 = new ImageIcon(h.get(w1));
         JOptionPane.showMessageDialog(null, w1,
-                "Slot 1", JOptionPane.INFORMATION_MESSAGE, icon1);
+                "Customized Dialog", JOptionPane.INFORMATION_MESSAGE, icon1);
         
         ImageIcon icon2 = new ImageIcon(h.get(w2));
         JOptionPane.showMessageDialog(null, w2,
-                "Slot 2", JOptionPane.INFORMATION_MESSAGE, icon2);
+                "Customized Dialog", JOptionPane.INFORMATION_MESSAGE, icon2);
         
         ImageIcon icon3 = new ImageIcon(h.get(w3));
         JOptionPane.showMessageDialog(null, w3,
-                "Slot 3", JOptionPane.INFORMATION_MESSAGE, icon3);
+                "Customized Dialog", JOptionPane.INFORMATION_MESSAGE, icon3);
 		
 	}
 	
